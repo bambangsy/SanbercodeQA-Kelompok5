@@ -3,10 +3,9 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
 
 class ScrapWeb:
-    driver = webdriver.Chrome("C:\Program Files (x86)\chromedriver.exe")
+    driver = webdriver.Chrome("chromedriver.exe")
         
     def get(self,website):
         self.driver.get(f'{website}')
@@ -102,18 +101,7 @@ class ScrapWeb:
         orderBtn = self.driver.find_element(By.XPATH,'//*[@id="checkout-payment-method-load"]/div/div/div[2]/div[2]/div[4]/div/button')
         orderBtn.click()
         time.sleep(5)
-        
-
-
-
-        
-
-        
-
-
-
-       
-        
+            
         
 #instansiasi class
 test = ScrapWeb()
